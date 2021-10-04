@@ -1,10 +1,10 @@
 # AmogDOS  
-AmogDOS is a very tiny Linux distribution based on Helena's Obvious, Minimal Environment (HOME) containing IceWM and essential Linux utilities and commands. Currently it doesn't do much and serves only a a system recovery and repair image, but it will soon enough be expanded into a full installation environment for AmogOS.  
+AmogDOS is a very tiny Linux distribution based on Helena's Obvious, Minimal Environment (HOME) containing a X11 WM, the Calamares installer and essential Linux utilities and commands. Currently it's a beta installation environment for AmogOS but also serves as a system recovery and repair image. Soon it will also be it's own extremely light seprate operating system.
   
 AmogDOS is being developed by @HVilaverde (Helena) for the AmogOS project, owned by JostroOS.
 
-This branch is s staging place for changes to be tested and are all merged into the main branch after.
-  
+![image](https://user-images.githubusercontent.com/44128563/135931496-164223e3-b0f1-477d-83de-ff090fd40b95.png)
+
 ## FAQ  
 
 - Upload the source code for it!  
