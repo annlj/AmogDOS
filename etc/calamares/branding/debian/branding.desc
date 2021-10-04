@@ -1,0 +1,37 @@
+---
+componentName:   debian
+welcomeStyleCalamares: true
+welcomeExpandingLogo: true
+windowExpanding: normal
+windowSize: 800px,520px
+windowPlacement: center
+
+strings:
+    productName:         AmogOS GNU/Linux
+    shortProductName:    AmogOS
+    version:             1.3.0 (Bullseye on the Moon)
+    shortVersion:        1.3.0
+    versionedName:       AmogOS GNU/Linux 1.3.0 (Bullseye on the Moon)
+    shortVersionedName:  AmogOS 1.3.0
+    bootloaderEntryName: AmogOS
+    productUrl:          https://www.jostroos.ml/amogos/index.html
+    supportUrl:          https://www.jostroos.ml/amogos/install.html
+    knownIssuesUrl:      https://github.com/jostroOS/AmogOS/issues
+    releaseNotesUrl:     https://github.com/jostroOS/AmogOS/releases
+    donateUrl:           https://opencollective.com/amogos
+
+images:
+    productLogo:         "debian-logo.png"
+    productIcon:         "debian-logo.png"
+    productWelcome:      "welcome.png"
+    # productWallpaper:  "wallpaper.png"
+
+slideshow:               "show.qml"
+
+style:
+   sidebarBackground:    "#2c3133"
+   sidebarText:          "#FFFFFF"
+   sidebarTextSelect:    "#4d7079"
+   sidebarTextSelect:    "#292F34"
+
+slideshowAPI: 2
