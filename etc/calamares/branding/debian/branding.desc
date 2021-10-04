@@ -9,10 +9,10 @@ windowPlacement: center
 strings:
     productName:         AmogOS GNU/Linux
     shortProductName:    AmogOS
-    version:             1.3.0 (Bullseye on the Moon)
-    shortVersion:        1.3.0
-    versionedName:       AmogOS GNU/Linux 1.3.0 (Bullseye on the Moon)
-    shortVersionedName:  AmogOS 1.3.0
+    version:             1.3.1 (Turtle on the Bullseye)
+    shortVersion:        1.3.1
+    versionedName:       AmogOS GNU/Linux 1.3.1 (Turtle on the Bullseye)
+    shortVersionedName:  AmogOS 1.3.1
     bootloaderEntryName: AmogOS
     productUrl:          https://www.jostroos.ml/amogos/index.html
     supportUrl:          https://www.jostroos.ml/amogos/install.html
