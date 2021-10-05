@@ -3,7 +3,6 @@
 #include "file.bi"
 
 CONST AS STRING lecture = "This is a command file for HOME, it's name is the only thing that matters, think of the folder it's in as a command list."
-CONST AS INTEGER MAX_LISTSIZE = 16
 
 function RestoreConfigurations(where1 as integer, where2 as integer, destructive as integer) as integer 
 
@@ -23,7 +22,7 @@ function RestoreConfigurations(where1 as integer, where2 as integer, destructive
 
         dim as string filestodestroy = dir("*")
 
-        for i as integer = 0 to MAX_LISTSIZE
+        for i as integer = 0 to 16
 
             if filestodestroy <> "firstboot.home" then
             
@@ -46,7 +45,7 @@ function RestoreConfigurations(where1 as integer, where2 as integer, destructive
     end if
 
     'restore the configurations.
-    dim as string defaultcommands(0 to MAX_LISTSIZE)
+    dim as string defaultcommands(0 to 16)
     defaultcommands(0) = "startx"
     defaultcommands(1) = "calamares"
 
@@ -159,7 +158,7 @@ if chwd = -1 then
 
     mkdir("commandstart")
     chdir("commandstart")
-    RestoreConfigurations(0, MAX_LISTSIZE, 1)
+    RestoreConfigurations(0, 16, 1)
 
     dim as integer recoveryfilenumber = freefile
     open "firstboot.home" for output as #recoveryfilenumber
@@ -184,14 +183,14 @@ close #filenumberforhome
 
 if isfirstboot = 1 then
 
-    RestoreConfigurations(0, MAX_LISTSIZE, 1)
+    RestoreConfigurations(0, 16, 1)
 
 endif
 
 'Add all valid file names to a command queue to be batch executed later
-dim as string commandqueue(0 to MAX_LISTSIZE)
+dim as string commandqueue(0 to 16)
 dim as string filelist = dir("*")
-for i as integer = 0 to MAX_LISTSIZE step 1
+for i as integer = 0 to 16 step 1
 
     if filelist = "" or filelist = " " then
 
@@ -210,7 +209,7 @@ next
 shell("chattr -R +i /home") 'Once again immutable.
 
 'We do this now, because waiting for dir() is too slow
-for i as integer = 0 to MAX_LISTSIZE step 1
+for i as integer = 0 to 16 step 1
 
     if commandqueue(i) = "" or commandqueue(i) = " " then
 
