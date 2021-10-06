@@ -91,18 +91,22 @@ next
 
 if instr(command(), "--startx false") then
 
-    if fileexists("/home/commandstart/startx") = 0 then
+    if fileexists("/home/commandstart/0startx") = 0 then
         print("X11 is already set to not start by default.")
+        End
     else
         kill "/home/commandstart/0startx"
+        End
     endif 
     
 elseif instr(command(), "--startx true") then
 
-    if fileexists("/home/commandstart/startx") <> 0 then
+    if fileexists("/home/commandstart/0startx") <> 0 then
         print("X11 is already set to start by default.")
+        End
     else
         RestoreConfigurations(0,0,0)
+        End
     endif
 
 endif
@@ -111,7 +115,7 @@ endif
 
 if instr(command(), "--startup") <> 0 then
     goto startup
-elseif instr(command(), "") = 0 or instr(command(), " ") = 0 then
+elseif command() = "" or command() = " " or command() = 0 then
     print(help_lecture)
 endif
 
