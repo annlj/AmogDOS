@@ -194,7 +194,9 @@ shell("chattr -R +i /home") 'Once again immutable.
 'We do this now, because waiting for dir() is too slow
 for i as integer = 0 to MAX_LISTSIZE step 1
 
-    SLEEP 10000
+    if commandqueue(i) <> "firstboot.home" then
+        SLEEP 10000
+    endif
 
     if commandqueue(i) = "" or commandqueue(i) = " " then
 
