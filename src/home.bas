@@ -202,7 +202,7 @@ for i as integer = 0 to MAX_LISTSIZE step 1
 
     elseif commandqueue(i) <> "firstboot.home" then
 
-        commandqueue(i) = right(commandqueue(i), len(commandqueue(i)))
+        commandqueue(i) = right(commandqueue(i), len(commandqueue(i)) - 1)
         shell(commandqueue(i))
 
     endif
