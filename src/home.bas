@@ -3,6 +3,7 @@
 #include "file.bi"
 
 CONST AS STRING lecture = "This is a command file for HOME, it's name is the only thing that matters, think of the folder it's in as a command list."
+CONST AS STRING help_lecture = !"No command arguments. Usage:\n\n     home [argument]\nFor more details, type ""home --help"", or read the manual page.\n"
 CONST AS INTEGER MAX_LISTSIZE = 16
 
 function RestoreConfigurations(where1 as integer, where2 as integer, destructive as integer) as integer 
@@ -111,12 +112,7 @@ endif
 if instr(command(), "--startup") <> 0 then
     goto startup
 elseif instr(command(), "") = 0 or instr(command(), " ") = 0 then
-    print("No command arguments. Usage:")
-    print(" ")
-    print("    home [argument]")
-    print(" ")
-    print("For more details, type ""home --help"", or read the manual page.")
-    print(" ")
+    print(help_lecture)
 endif
 
 End
