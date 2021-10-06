@@ -108,11 +108,17 @@ endif
 
 'Arguments ralating to the autostartup
 
-if instr(command(), "--startup") then
+if instr(command(), "--startup") <> 0 then
     goto startup
+elseif instr(command(), "") = 0 or instr(command(), " ") = 0 then
+    print("No command arguments. Usage:")
+    print(" ")
+    print("    home [argument]")
+    print(" ")
+    print("For more details, type ""home --help"", or read the manual page.")
+    print(" ")
 endif
 
-'End the program
 End
 
 startup:
