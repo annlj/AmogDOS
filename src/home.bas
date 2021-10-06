@@ -42,8 +42,8 @@ function RestoreConfigurations(where1 as integer, where2 as integer, destructive
 
     'restore the configurations.
     dim as string defaultcommands(0 to MAX_LISTSIZE)
-    defaultcommands(0) = "startx"
-    defaultcommands(1) = "calamares"
+    defaultcommands(0) = "0startx"
+    defaultcommands(1) = "1calamares"
 
     for i as integer = where1 to where2 step 1
         
@@ -94,7 +94,7 @@ if instr(command(), "--startx false") then
     if fileexists("/home/commandstart/startx") = 0 then
         print("X11 is already set to not start by default.")
     else
-        kill "/home/commandstart/startx"
+        kill "/home/commandstart/0startx"
     endif 
     
 elseif instr(command(), "--startx true") then
@@ -194,12 +194,15 @@ shell("chattr -R +i /home") 'Once again immutable.
 'We do this now, because waiting for dir() is too slow
 for i as integer = 0 to MAX_LISTSIZE step 1
 
+    SLEEP 10000
+
     if commandqueue(i) = "" or commandqueue(i) = " " then
 
         exit for
 
     elseif commandqueue(i) <> "firstboot.home" then
 
+        commandqueue(i) = right(commandqueue(i), len(commandqueue(i)))
         shell(commandqueue(i))
 
     endif
