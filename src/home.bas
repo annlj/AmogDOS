@@ -12,8 +12,8 @@ function RestoreConfigurations(where1 as integer, where2 as integer, destructive
 
     dim as integer configrestorefilenumber = freefile
 
-    if curdir <> "/home" then
-        chdir("/home")
+    if curdir <> "/home" or curdir <> "/home/commandstart" then
+        chdir("/home/commandstart/")
     endif
 
     'If destructive, delete all files in commandstart before restoring the desired configurations.
@@ -63,7 +63,7 @@ function RestoreConfigurations(where1 as integer, where2 as integer, destructive
     erase(defaultcommands)
 
     shell("chattr -R +i /home")
-
+    chdir("/home/")
     return 1
 
 end function
