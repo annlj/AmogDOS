@@ -43,7 +43,6 @@ function RestoreConfigurations(where1 as integer, where2 as integer, destructive
     'restore the configurations.
     dim as string defaultcommands(0 to MAX_LISTSIZE)
     defaultcommands(0) = "0startx"
-    defaultcommands(1) = "1calamares"
 
     for i as integer = where1 to where2 step 1
         
@@ -199,7 +198,7 @@ shell("chattr -R +i /home") 'Once again immutable.
 for i as integer = 0 to MAX_LISTSIZE step 1
 
     if commandqueue(i) <> "firstboot.home" then
-        SLEEP 10000
+        SLEEP 2500
     endif
 
     if commandqueue(i) = "" or commandqueue(i) = " " then
