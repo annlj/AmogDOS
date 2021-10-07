@@ -1,0 +1,4 @@
+#!/bin/sh
+# Symlink to: /bin/chage /bin/useradd /bin/userdel /bin/passwd /bin/usermod /bin/adduser /bin/deluser
+
+home --userlecture

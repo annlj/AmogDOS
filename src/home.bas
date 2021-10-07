@@ -3,7 +3,7 @@
 #include "file.bi"
 
 CONST AS STRING lecture = "This is a command file for HOME, it's name is the only thing that matters, think of the folder it's in as a command list."
-CONST AS STRING help_lecture = !"No command arguments. Usage:\n\n     home [argument]\nFor more details, type ""home --help"", or read the manual page.\n"
+CONST AS STRING help_lecture = !"No command arguments. Usage:\n\n     home [argument]\n For more details, type ""home --help"", or read the manual page.\n"
 CONST AS INTEGER MAX_LISTSIZE = 16
 
 function RestoreConfigurations(where1 as integer, where2 as integer, destructive as integer) as integer 
@@ -69,17 +69,9 @@ end function
 
 'Command argument check.
 'Literally the first thing we take care of is removing features.
-dim as string usercommands(4)
-
-    usercommands(0) = "useradd"
-    usercommands(1) = "userdel"
-    usercommands(2) = "usermod"
-    usercommands(3) = "passwd"
-    usercommands(4) = "chage"
-
 for i as integer = 0 to 4 step 1
 
-    if instr(command(), usercommands(i)) <> 0 then
+    if instr(command(), "--userlecture") <> 0 then
         print("HOME does not support creating/editing users!")
         end 1
     endif
