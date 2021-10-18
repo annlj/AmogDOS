@@ -9,15 +9,15 @@ windowPlacement: center
 strings:
     productName:         AmogOS GNU/Linux
     shortProductName:    AmogOS
-    version:             1.3.1 (Turtle on the Bullseye)
-    shortVersion:        1.3.1
-    versionedName:       AmogOS GNU/Linux 1.3.1 (Turtle on the Bullseye)
-    shortVersionedName:  AmogOS 1.3.1
+    version:             1.4.0 (Turtle on the Bullseye)
+    shortVersion:        1.4.0
+    versionedName:       AmogOS GNU/Linux 1.4.0 (Turtle on the Bullseye)
+    shortVersionedName:  AmogOS 1.4.0
     bootloaderEntryName: AmogOS
-    productUrl:          https://www.jostroos.ml/amogos/index.html
-    supportUrl:          https://www.jostroos.ml/amogos/install.html
-    knownIssuesUrl:      https://github.com/jostroOS/AmogOS/issues
-    releaseNotesUrl:     https://github.com/jostroOS/AmogOS/releases
+    productUrl:          https://www.amogos.studio/index.html
+    supportUrl:          https://www.amogos.studio/install.html
+    knownIssuesUrl:      https://github.com/Amog-OS/AmogOS/issues
+    releaseNotesUrl:     https://github.com/Amog-OS/AmogOS/releases
     donateUrl:           https://opencollective.com/amogos
 
 images:
